@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {# TODO mudar para tabela#}
+    <ul>
+        {% for item in items %}
+            <li>{{ item.name }}</li>
+            {# TODO adicionar outros campos#}
+        {% endfor %}
+    </ul>
+{% endblock %}
