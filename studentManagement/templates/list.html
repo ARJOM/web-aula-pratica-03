@@ -1,11 +1,23 @@
 {% extends 'base.html' %}
-
 {% block content %}
-    {# TODO mudar para tabela#}
-    <ul>
-        {% for item in items %}
-            <li>{{ item.name }}</li>
-            {# TODO adicionar outros campos#}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Registration</th>
+            <th>Email</th>
+            <th>CPF</th>
+            <th>Date of Birth</th>
+        </tr>
+        {% for student in students %}
+            <tr class='student'>
+                <td>{{ student.name}}</td>
+                <td>{{ student.registration}}</td>
+                <td>{{ student.email}}</td>
+                <td>{{ student.cpf}}</td>
+                <td>{{ student.date_birth}}</td>
+            </tr>
         {% endfor %}
-    </ul>
+    </table>
+    
+    <button onclick="location.href = '/add-student'">Add student</button>
 {% endblock %}
